@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "small-business-toolkit",
+    "title": "Small Business Toolkit",
+    "summary": "A modular platform with tools like inspections, employee training, and inventory management — built for growing businesses.",
+    "tags": ["Inspections", "Training", "Inventory"],
+    "demoUrl": "https://demo.sidiqi.ai/business-toolkit",
+    "embedUrl": "https://demo.sidiqi.ai/business-toolkit/embed",
+    "repoUrl": "https://github.com/sidiqi/business-toolkit"
+  },
+  {
+    "slug": "smart-cv-builder",
+    "title": "Smart CV Builder",
+    "summary": "An AI-assisted resume generator that helps students create professional CVs with clean templates.",
+    "tags": ["AI-Assisted", "Templates", "Student-Focused"],
+    "demoUrl": "https://demo.sidiqi.ai/cv-builder",
+    "embedUrl": "https://demo.sidiqi.ai/cv-builder/embed",
+    "repoUrl": "https://github.com/sidiqi/cv-builder"
+  }
+]
