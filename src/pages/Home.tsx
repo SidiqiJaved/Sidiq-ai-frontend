@@ -12,6 +12,9 @@ import type { Project } from "@/types/project";
 export const Home: React.FC = () => {
   const [heroRef, heroInView] = useInView();
   const [aboutRef, aboutInView] = useInView();
+
+  const [projectsRef, projectsInView] = useInView();
+const [contactRef, contactInView] = useInView();
   const [embedVisible, setEmbedVisible] = useState<Record<string, boolean>>({});
   const prefersReducedMotion = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -30,7 +33,9 @@ export const Home: React.FC = () => {
       <section
         id="home"
         ref={heroRef}
-        className={`relative min-h-screen flex items-center justify-center overflow-hidden ${prefersReducedMotion ? "" : "transition-all duration-1000"} ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+        className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+  prefersReducedMotion ? "" : "transition-all duration-1000"
+} ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
         {/* ...SVG background and hero content, same as original... */}
         {/* Prominent Logo */}
@@ -51,12 +56,16 @@ export const Home: React.FC = () => {
           </Button>
         </div>
       </section>
-      {/* About & Mission Section */}
-      <section
-        id="about"
-        ref={aboutRef}
-        className={`relative py-24 px-6 ${prefersReducedMotion ? "" : "transition-all duration-1000"} ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}
-      >
+
+
+       {/* About & Mission Section */}
+     <section
+  id="about"
+  ref={aboutRef}
+  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+    prefersReducedMotion ? "" : "transition-all duration-1000"
+  } ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+>
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
@@ -111,12 +120,13 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
-      <section
-        id="projects"
-        className={`py-20 px-6 bg-gray-900/20 ${
-          prefersReducedMotion ? "" : "transition-all duration-1000"
-        }`}
+       {/* Projects Section */}
+     <section
+  id="projects"
+  ref={projectsRef}
+  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+    prefersReducedMotion ? "" : "transition-all duration-1000"
+  } ${projectsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -138,13 +148,15 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+          
       {/* Contact Section */}
       <section
-        id="contact"
-        className={`py-20 px-6 ${
-          prefersReducedMotion ? "" : "transition-all duration-1000"
-        }`}
-      >
+  id="contact"
+  ref={contactRef}
+  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+    prefersReducedMotion ? "" : "transition-all duration-1000"
+  } ${contactInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+>
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Get in Touch</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
