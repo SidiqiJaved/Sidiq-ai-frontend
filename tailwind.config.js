@@ -1,23 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ["class"],
+  darkMode: ["class", '[data-theme="dark"]'],
   content: [
     './src/**/*.{ts,tsx}',
   ],
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Arial', 'sans-serif'],
+        display: ['Space Grotesk', 'Inter', 'sans-serif'],
+      },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
-        ring: "hsl(var(--ring))",
-        background: "hsl(var(--background))",
+        bg: 'var(--bg)',
+        text: 'var(--text)',
+        'text-sub': 'var(--text-sub)',
+        surface: 'var(--surface)',
+        muted: 'var(--muted)',
+        border: 'var(--border)',
+        accent: 'var(--accent)',
+        'accent-ink': 'var(--accent-ink)',
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",

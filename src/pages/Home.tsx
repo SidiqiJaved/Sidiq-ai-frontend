@@ -46,7 +46,7 @@ const [contactRef, contactInView] = useInView();
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
             Practical AI Solutions for
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Business & Education</span>
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Business, Education & Healthcare</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
             Sidiqi.ai designs and ships interactive tools that solve real-world challenges.
@@ -58,64 +58,55 @@ const [contactRef, contactInView] = useInView();
       </section>
 
 
-       {/* About & Mission Section */}
-     <section
-  id="about"
-  ref={aboutRef}
-  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
-    prefersReducedMotion ? "" : "transition-all duration-1000"
-  } ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
->
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-2xl shadow-blue-500/10 rounded-3xl">
-                <CardContent className="p-8">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">About Sidiqi.ai</h2>
-                  <p className="text-lg text-gray-400 leading-relaxed">
-                    Sidiqi.ai is where technology meets business in a practical way. We create AI-powered tools that address real-world challenges for businesses and individuals. Our focus is on transforming ideas into interactive solutions that are simple, useful, and built for impact.
+      {/* About & Mission Section */}
+      <section
+        id="about"
+        ref={aboutRef}
+        className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+          prefersReducedMotion ? "" : "transition-all duration-1000"
+        } ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
+          <div className="flex items-center justify-center space-x-4 mb-8">
+            <SidiqiLogo size="xl" />
+            <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">About Us</span>
+          </div>
+          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
+            Where Technology Meets
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Business Innovation</span>
+          </h2>
+          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
+            Sidiqi.ai creates AI-powered tools that address real-world challenges for businesses and individuals.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-16">
+            <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-blue-500/5 p-8 rounded-3xl">
+              <CardContent>
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                    <Target className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Our Mission</h3>
+                  <p className="text-gray-400 text-lg">
+                    To empower small businesses and individuals with accessible, AI-driven tools that enhance growth, efficiency, and opportunity.
                   </p>
-                </CardContent>
-              </Card>
-              <div className="space-y-6">
-                <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-blue-500/5 rounded-2xl">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Target className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Mission</h3>
-                        <p className="text-gray-400 leading-relaxed">
-                          To empower small businesses and individuals with accessible, AI-driven tools that enhance growth, efficiency, and opportunity.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-purple-500/5 rounded-2xl">
-                  <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Eye className="w-6 h-6 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Vision</h3>
-                        <p className="text-gray-400 leading-relaxed">
-                          A future where AI is seamlessly integrated into daily business and personal workflows — simple, intuitive, and impactful for everyone.
-                        </p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-            {/* ...AI graphic placeholder... */}
-            <div className="relative w-full h-96 lg:h-[500px] bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl flex items-center justify-center border border-blue-500/30 shadow-2xl shadow-blue-500/20 backdrop-blur-sm overflow-hidden">
-              <SidiqiLogo size="xl" className="mx-auto mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">AI Innovation</h3>
-              <p className="text-gray-400">Intelligent systems designed for real-world impact</p>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-purple-500/5 p-8 rounded-3xl">
+              <CardContent>
+                <div className="flex flex-col items-center text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                    <Eye className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Our Vision</h3>
+                  <p className="text-gray-400 text-lg">
+                    A future where AI is seamlessly integrated into daily business and personal workflows — simple, intuitive, and impactful for everyone.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -130,20 +121,37 @@ const [contactRef, contactInView] = useInView();
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Featured Projects</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Industry Solutions</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Interactive AI-powered tools designed to streamline workflows and enhance productivity.
+              Specialized AI platforms built for specific industries, designed to solve complex operational challenges at scale.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {projectsData.map((project: Project) => (
-              <ProjectCard
-                key={project.slug}
-                {...project}
-                onEmbedToggle={() => handleEmbedToggle(project.slug)}
-                embedVisible={embedVisible[project.slug] || false}
-              />
-            ))}
+          <div className="flex flex-col gap-12 max-w-6xl mx-auto px-6">
+            {/* Flagship Project */}
+            <div className="w-full">
+              {projectsData[0] && (
+                <div className="transform hover:scale-[1.02] transition-transform duration-300">
+                  <ProjectCard
+                    key={projectsData[0].slug}
+                    {...projectsData[0]}
+                    onEmbedToggle={() => handleEmbedToggle(projectsData[0]?.slug || '')}
+                    embedVisible={embedVisible[projectsData[0]?.slug || ''] || false}
+                  />
+                </div>
+              )}
+            </div>
+            
+            {/* Secondary Projects Row */}
+            <div className="grid md:grid-cols-2 gap-12">
+              {projectsData.slice(1).map((project: Project) => (
+                <ProjectCard
+                  key={project.slug}
+                  {...project}
+                  onEmbedToggle={() => handleEmbedToggle(project.slug)}
+                  embedVisible={embedVisible[project.slug] || false}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>

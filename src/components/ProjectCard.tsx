@@ -14,16 +14,16 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   summary,
   tags,
   demoUrl,
+  conceptUrl,
   onEmbedToggle,
   embedVisible,
   embedUrl,
   repoUrl,
 }) => (
   <Card className="group hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 bg-gray-900/50 backdrop-blur-sm transform hover:scale-105 hover:-translate-y-4">
-    <CardHeader className="pb-4">
-      <div className="flex items-center space-x-3 mb-4">
-        {/* Icon slot could go here if needed */}
-        <CardTitle className="text-2xl text-white group-hover:text-blue-400 transition-colors">
+    <CardHeader className="pb-4 text-center">
+      <div className="flex items-center justify-center mb-4">
+        <CardTitle className="text-3xl text-white group-hover:text-blue-400 transition-colors bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
           {title}
         </CardTitle>
       </div>
@@ -39,14 +39,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </span>
         ))}
       </div>
-      {demoUrl && (
+      {(demoUrl || conceptUrl) && (
         <Button
           asChild
           className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 rounded-xl border-0"
           size="lg"
         >
-          <a href={demoUrl} target="_blank" rel="noopener">
-            View Demo <ExternalLink className="w-4 h-4 ml-2" />
+          <a href={demoUrl || conceptUrl} target="_blank" rel="noopener">
+            {demoUrl ? "Explore Platform" : "View Concept"} <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </Button>
       )}

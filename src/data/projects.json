@@ -1,20 +1,29 @@
 [
   {
-    "slug": "small-business-toolkit",
-    "title": "Small Business Toolkit",
-    "summary": "A modular platform with tools like inspections, employee training, and inventory management — built for growing businesses.",
-    "tags": ["Inspections", "Training", "Inventory"],
-    "demoUrl": "https://demo.sidiqi.ai/business-toolkit",
-    "embedUrl": "https://demo.sidiqi.ai/business-toolkit/embed",
-    "repoUrl": "https://github.com/sidiqi/business-toolkit"
+    "slug": "restaurant-operations",
+    "title": "Restaurant Operations Intelligence",
+    "summary": "An integrated AI platform designed specifically for restaurant chains with 5+ locations — featuring automated inspections, staff training systems, and intelligent inventory management.",
+    "tags": ["Staff Training", "Smart Inventory", "AI Analytics"],
+    "demoUrl": "https://demo.sidiqi.ai/restaurant-ops",
+    "embedUrl": "https://demo.sidiqi.ai/restaurant-ops/embed",
+    "repoUrl": "https://github.com/sidiqi/restaurant-operations"
   },
   {
-    "slug": "smart-cv-builder",
-    "title": "Smart CV Builder",
-    "summary": "An AI-assisted resume generator that helps students create professional CVs with clean templates.",
-    "tags": ["AI-Assisted", "Templates", "Student-Focused"],
-    "demoUrl": "https://demo.sidiqi.ai/cv-builder",
-    "embedUrl": "https://demo.sidiqi.ai/cv-builder/embed",
-    "repoUrl": "https://github.com/sidiqi/cv-builder"
+    "slug": "professional-development",
+    "title": "Professional Development Suite",
+    "summary": "An intelligent career development platform that guides professionals through resume optimization, skill assessment, and career pathway planning using AI-driven insights.",
+    "tags": ["Career Intelligence", "Optimization", "Professional Growth"],
+    "demoUrl": "https://demo.sidiqi.ai/professional-dev",
+    "embedUrl": "https://demo.sidiqi.ai/professional-dev/embed",
+    "repoUrl": "https://github.com/sidiqi/professional-development"
+  },
+  {
+    "slug": "healthcare-modernization",
+    "title": "Healthcare Modernization",
+    "summary": "A streamlined platform for healthcare practices and medical offices that streamlines patient intake, optimizes scheduling, and automates follow-ups — improving care without disrupting existing systems.",
+    "tags": ["Patient Intake", "Scheduling", "Follow-Ups"],
+    "conceptUrl": "https://demo.sidiqi.ai/healthcare/concept",
+    "embedUrl": "https://demo.sidiqi.ai/healthcare/embed",
+    "repoUrl": "https://github.com/sidiqi/healthcare-platform"
   }
 ]

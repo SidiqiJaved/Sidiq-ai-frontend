@@ -4,6 +4,7 @@ export type Project = {
   summary: string;
   tags: string[];
   demoUrl?: string;
+  conceptUrl?: string;
   embedUrl?: string;
   repoUrl?: string;
 };

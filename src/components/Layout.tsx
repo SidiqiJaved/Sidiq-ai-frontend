@@ -2,6 +2,7 @@ import { useLocation } from "react-router-dom";
 import { SidiqiLogo } from "@/components/SidiqiLogo";
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"; // Optional: for icons
+import Footer from "./Footer";
 
 const navItems = [
   { to: "home", label: "Home" },
@@ -94,6 +95,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       </nav>
 
       <main className="pt-24">{children}</main>
+      <Footer />
     </div>
   );
 };

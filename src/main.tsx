@@ -8,6 +8,11 @@ import { Contact } from "@/pages/Contact";
 import { FigmaDev } from "@/pages/FigmaDev";
 import "./index.css";
 
+// Initialize theme from localStorage
+const theme = localStorage.getItem("theme");
+if (theme === "dark") {
+  document.documentElement.setAttribute("data-theme", "dark");
+}
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
