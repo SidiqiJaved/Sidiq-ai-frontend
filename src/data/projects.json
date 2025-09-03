@@ -6,7 +6,11 @@
     "tags": ["Staff Training", "Smart Inventory", "AI Analytics"],
     "demoUrl": "https://demo.sidiqi.ai/restaurant-ops",
     "embedUrl": "https://demo.sidiqi.ai/restaurant-ops/embed",
-    "repoUrl": "https://github.com/sidiqi/restaurant-operations"
+    "repoUrl": "https://github.com/sidiqi/restaurant-operations",
+    "usageDetail": "Used by restaurant chains with 5-500 locations",
+    "pricingDetail": "Custom solution designed for your operation size",
+    "ctaText": "Request Custom Demo",
+    "ctaUrl": "mailto:sales@sidiqi.ai?subject=Restaurant Operations Custom Demo Request"
   },
   {
     "slug": "professional-development",
@@ -15,15 +19,23 @@
     "tags": ["Career Intelligence", "Optimization", "Professional Growth"],
     "demoUrl": "https://demo.sidiqi.ai/professional-dev",
     "embedUrl": "https://demo.sidiqi.ai/professional-dev/embed",
-    "repoUrl": "https://github.com/sidiqi/professional-development"
+    "repoUrl": "https://github.com/sidiqi/professional-development",
+    "usageDetail": "Enterprise HR solution for growing companies",
+    "pricingDetail": "Volume pricing available",
+    "ctaText": "Get Enterprise Access",
+    "ctaUrl": "mailto:enterprise@sidiqi.ai?subject=Professional Development Enterprise Access"
   },
   {
     "slug": "healthcare-modernization",
-    "title": "Healthcare Modernization",
+    "title": "Healthcare Modernization Platform",
     "summary": "A streamlined platform for healthcare practices and medical offices that streamlines patient intake, optimizes scheduling, and automates follow-ups — improving care without disrupting existing systems.",
     "tags": ["Patient Intake", "Scheduling", "Follow-Ups"],
     "conceptUrl": "https://demo.sidiqi.ai/healthcare/concept",
     "embedUrl": "https://demo.sidiqi.ai/healthcare/embed",
-    "repoUrl": "https://github.com/sidiqi/healthcare-platform"
+    "repoUrl": "https://github.com/sidiqi/healthcare-platform",
+    "usageDetail": "HIPAA-compliant, enterprise-ready",
+    "pricingDetail": "Seamless integration with existing systems",
+    "ctaText": "Schedule Consultation",
+    "ctaUrl": "mailto:healthcare@sidiqi.ai?subject=Healthcare Platform Consultation Request"
   }
 ]

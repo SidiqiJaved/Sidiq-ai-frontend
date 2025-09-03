@@ -7,4 +7,8 @@ export type Project = {
   conceptUrl?: string;
   embedUrl?: string;
   repoUrl?: string;
+  usageDetail?: string;
+  pricingDetail?: string;
+  ctaText?: string;
+  ctaUrl?: string;
 };

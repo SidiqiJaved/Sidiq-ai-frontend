@@ -45,14 +45,14 @@ const [contactRef, contactInView] = useInView();
             <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Sidiqi.ai</span>
           </div>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-            Practical AI Solutions for
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Business, Education & Healthcare</span>
+            AI Solutions That
+            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Scale Your Business Operations</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Sidiqi.ai designs and ships interactive tools that solve real-world challenges.
+            Purpose-built platforms for restaurant chains, healthcare practices, and growing enterprises
           </p>
           <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0" asChild>
-            <a href="/projects">View Projects</a>
+            <a href="mailto:strategy@sidiqi.ai?subject=Strategy Call Request">Schedule Strategy Call</a>
           </Button>
         </div>
       </section>

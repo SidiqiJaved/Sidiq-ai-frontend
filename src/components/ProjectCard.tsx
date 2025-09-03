@@ -19,6 +19,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   embedVisible,
   embedUrl,
   repoUrl,
+  usageDetail,
+  pricingDetail,
+  ctaText,
+  ctaUrl,
 }) => (
   <Card className="group hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 bg-gray-900/50 backdrop-blur-sm transform hover:scale-105 hover:-translate-y-4">
     <CardHeader className="pb-4 text-center">
@@ -39,17 +43,36 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </span>
         ))}
       </div>
-      {(demoUrl || conceptUrl) && (
+      {/* Enterprise Details */}
+      <div className="mt-6 mb-6 py-4 border-y border-gray-700/30">
+        <div className="space-y-2 text-center">
+          {usageDetail && (
+            <p className="text-lg font-medium bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+              {usageDetail}
+            </p>
+          )}
+          {pricingDetail && (
+            <p className="text-gray-400">
+              {pricingDetail}
+            </p>
+          )}
+        </div>
+      </div>
+
+      {/* Main CTA Button */}
+      {ctaUrl && ctaText && (
         <Button
           asChild
           className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 transition-all duration-300 rounded-xl border-0"
           size="lg"
         >
-          <a href={demoUrl || conceptUrl} target="_blank" rel="noopener">
-            {demoUrl ? "Explore Platform" : "View Concept"} <ExternalLink className="w-4 h-4 ml-2" />
+          <a href={ctaUrl} target="_blank" rel="noopener">
+            {ctaText} <ExternalLink className="w-4 h-4 ml-2" />
           </a>
         </Button>
       )}
+
+      {/* Secondary Actions */}
       {onEmbedToggle && (
         <Button
           type="button"
