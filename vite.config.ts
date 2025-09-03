@@ -9,4 +9,13 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    ssrManifest: true,
+    sourcemap: true,
+    rollupOptions: {
+      output: {
+        manualChunks: {}
+      }
+    }
+  }
 });

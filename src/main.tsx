@@ -9,12 +9,16 @@ import { FigmaDev } from "@/pages/FigmaDev";
 import "./index.css";
 
 // Initialize theme from localStorage
-const theme = localStorage.getItem("theme");
-if (theme === "dark") {
-  document.documentElement.setAttribute("data-theme", "dark");
+if (typeof window !== 'undefined') {
+  const theme = localStorage.getItem("theme");
+  if (theme === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const rootElement = document.getElementById("root")!;
+
+const app = (
   <React.StrictMode>
     <BrowserRouter>
       <Layout>
@@ -28,3 +32,9 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     </BrowserRouter>
   </React.StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, app);
+} else {
+  ReactDOM.createRoot(rootElement).render(app);
+}
