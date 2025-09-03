@@ -88,7 +88,7 @@ const [contactRef, contactInView] = useInView();
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Our Mission</h3>
                   <p className="text-gray-400 text-lg">
-                    To empower small businesses and individuals with accessible, AI-driven tools that enhance growth, efficiency, and opportunity.
+                    To transform enterprise operations through strategic AI implementation and drive sustainable competitive advantage.
                   </p>
                 </div>
               </CardContent>
@@ -102,7 +102,7 @@ const [contactRef, contactInView] = useInView();
                   </div>
                   <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Our Vision</h3>
                   <p className="text-gray-400 text-lg">
-                    A future where AI is seamlessly integrated into daily business and personal workflows — simple, intuitive, and impactful for everyone.
+                    Leading the next generation of business transformation where AI creates measurable impact and operational excellence.
                   </p>
                 </div>
               </CardContent>
@@ -111,9 +111,9 @@ const [contactRef, contactInView] = useInView();
         </div>
       </section>
 
-       {/* Projects Section */}
+       {/* Solutions Section */}
      <section
-  id="projects"
+  id="solutions"
   ref={projectsRef}
   className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
     prefersReducedMotion ? "" : "transition-all duration-1000"
@@ -121,13 +121,13 @@ const [contactRef, contactInView] = useInView();
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Industry Solutions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Enterprise Solutions</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Specialized AI platforms built for specific industries, designed to solve complex operational challenges at scale.
+              Strategic AI consulting and implementation services designed to transform industry operations and create sustainable competitive advantage.
             </p>
           </div>
           <div className="flex flex-col gap-12 max-w-6xl mx-auto px-6">
-            {/* Flagship Project */}
+            {/* Flagship Solution */}
             <div className="w-full">
               {projectsData[0] && (
                 <div className="transform hover:scale-[1.02] transition-transform duration-300">
@@ -141,7 +141,7 @@ const [contactRef, contactInView] = useInView();
               )}
             </div>
             
-            {/* Secondary Projects Row */}
+            {/* Secondary Solutions Row */}
             <div className="grid md:grid-cols-2 gap-12">
               {projectsData.slice(1).map((project: Project) => (
                 <ProjectCard
@@ -168,10 +168,10 @@ const [contactRef, contactInView] = useInView();
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Get in Touch</h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-            Have a project in mind or want to learn more about our AI solutions? Let's talk about how we can help.
+            Ready to transform your operations and drive measurable growth? Let's discuss your strategic objectives and operational challenges.
           </p>
           <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0">
-            <a href="mailto:contact@sidiqi.ai">Contact Us</a>
+            <a href="mailto:contact@sidiqi.ai">Schedule Strategic Consultation</a>
           </Button>
         </div>
       </section>

@@ -9,14 +9,14 @@ const Footer: React.FC = () => {
           <a href="/insights" className="text-white hover:text-blue-400 transition-all duration-300">Insights</a>
           <a href="/labs" className="text-white hover:text-blue-400 transition-all duration-300">Labs</a>
           <a href="/about" className="text-white hover:text-blue-400 transition-all duration-300">About</a>
-          <a href="/contact" className="text-white hover:text-blue-400 transition-all duration-300">Contact</a>
+          <a href="/contact" className="text-white hover:text-blue-400 transition-all duration-300">Schedule Strategic Consultation</a>
           <span className="ml-auto flex items-center gap-2">
             <a href="https://sg2tech.com" target="_blank" rel="noopener" className="text-white hover:text-blue-400 transition-all duration-300">SG2 Tech</a>
             <span className="text-gray-600">·</span>
             <a href="https://sidiqigroup.com" target="_blank" rel="noopener" className="text-white hover:text-blue-400 transition-all duration-300">Sidiqi Group</a>
           </span>
         </nav>
-        <p className="text-gray-400 text-sm mt-4">An innovation project from the Sidiqi Group.</p>
+        <p className="text-gray-400 text-sm mt-4">Strategic AI consulting division of Sidiqi Global Group.</p>
       </div>
     </footer>
   );

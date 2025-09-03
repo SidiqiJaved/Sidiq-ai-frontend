@@ -8,7 +8,7 @@ const Header: React.FC = () => {
         <a href="/insights">Insights</a>
         <a href="/labs">Labs</a>
         <a href="/about">About</a>
-        <a href="/contact">Contact</a>
+        <a href="/contact">Schedule Strategic Consultation</a>
         <div className="spacer" />
         <a href="https://sg2tech.com" target="_blank" rel="noopener">SG2 Tech</a>
         <a href="https://sidiqigroup.com" target="_blank" rel="noopener">Sidiqi Group</a>

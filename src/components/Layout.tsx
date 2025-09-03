@@ -7,8 +7,8 @@ import Footer from "./Footer";
 const navItems = [
   { to: "home", label: "Home" },
   { to: "about", label: "About" },
-  { to: "projects", label: "Projects" },
-  { to: "contact", label: "Contact" },
+  { to: "solutions", label: "Solutions" },
+  { to: "contact", label: "Schedule Strategic Consultation" },
 ];
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
