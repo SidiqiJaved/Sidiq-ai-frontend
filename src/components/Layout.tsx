@@ -8,6 +8,7 @@ const navItems = [
   { to: "home", label: "Home" },
   { to: "about", label: "About" },
   { to: "solutions", label: "Solutions" },
+  { to: "methodology", label: "Strategic Approach" },
   { to: "contact", label: "Schedule Strategic Consultation" },
 ];
 

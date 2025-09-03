@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Target, Eye } from "lucide-react";
 import React, { useState } from "react";
 import { ProjectCard } from "@/components/ProjectCard";
+import { MethodologySection } from "@/components/MethodologySection";
 import { track } from "@/lib/analytics";
 import projectsData from "@/data/projects.json";
 import type { Project } from "@/types/project";
@@ -12,7 +13,7 @@ import type { Project } from "@/types/project";
 export const Home: React.FC = () => {
   const [heroRef, heroInView] = useInView();
   const [aboutRef, aboutInView] = useInView();
-
+  const [methodologyRef, methodologyInView] = useInView();
   const [projectsRef, projectsInView] = useInView();
 const [contactRef, contactInView] = useInView();
   const [embedVisible, setEmbedVisible] = useState<Record<string, boolean>>({});
@@ -34,26 +35,31 @@ const [contactRef, contactInView] = useInView();
         id="home"
         ref={heroRef}
         className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
-  prefersReducedMotion ? "" : "transition-all duration-1000"
-} ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+          prefersReducedMotion ? "" : "transition-all duration-1000"
+        } ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        {/* ...SVG background and hero content, same as original... */}
-        {/* Prominent Logo */}
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <SidiqiLogo size="xl" />
-            <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Sidiqi.ai</span>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center space-x-4 mb-8">
+              <SidiqiLogo size="xl" className="transform hover:scale-110 transition-transform duration-500" />
+              <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Sidiqi.ai
+              </h1>
+            </div>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              AI Solutions That Scale Your Business Operations
+            </p>
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-12">
+              Purpose-built platforms for restaurant chains, healthcare practices, and growing enterprises
+            </p>
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0 transform hover:scale-105 transition-all duration-300" 
+              asChild
+            >
+              <a href="mailto:strategy@sidiqi.ai?subject=Strategy Call Request">Schedule Strategy Call</a>
+            </Button>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-            AI Solutions That
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Scale Your Business Operations</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Purpose-built platforms for restaurant chains, healthcare practices, and growing enterprises
-          </p>
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0" asChild>
-            <a href="mailto:strategy@sidiqi.ai?subject=Strategy Call Request">Schedule Strategy Call</a>
-          </Button>
         </div>
       </section>
 
@@ -66,42 +72,39 @@ const [contactRef, contactInView] = useInView();
           prefersReducedMotion ? "" : "transition-all duration-1000"
         } ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-6">
-          <div className="flex items-center justify-center space-x-4 mb-8">
-            <SidiqiLogo size="xl" />
-            <span className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">About Us</span>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              About Us
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Where Technology Meets Business Innovation
+            </p>
           </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight">
-            Where Technology Meets
-            <span className="bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent block mt-2">Business Innovation</span>
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Sidiqi.ai creates AI-powered tools that address real-world challenges for businesses and individuals.
-          </p>
           
-          <div className="grid md:grid-cols-2 gap-8 mt-16">
-            <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-blue-500/5 p-8 rounded-3xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="group bg-gray-900/50 backdrop-blur-sm border-gray-700/50 hover:border-blue-500/50 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/20 p-8 rounded-3xl transition-all duration-500">
               <CardContent>
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <Target className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Our Mission</h3>
-                  <p className="text-gray-400 text-lg">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-cyan-300 transition-colors">Our Mission</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
                     To transform enterprise operations through strategic AI implementation and drive sustainable competitive advantage.
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-gray-900/50 backdrop-blur-sm border-gray-700/50 shadow-xl shadow-purple-500/5 p-8 rounded-3xl">
+            <Card className="group bg-gray-900/50 backdrop-blur-sm border-gray-700/50 hover:border-blue-500/50 shadow-xl shadow-blue-500/5 hover:shadow-2xl hover:shadow-blue-500/20 p-8 rounded-3xl transition-all duration-500">
               <CardContent>
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center transform group-hover:scale-110 transition-transform duration-500">
                     <Eye className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Our Vision</h3>
-                  <p className="text-gray-400 text-lg">
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent group-hover:from-blue-300 group-hover:to-cyan-300 transition-colors">Our Vision</h3>
+                  <p className="text-gray-400 text-lg leading-relaxed">
                     Leading the next generation of business transformation where AI creates measurable impact and operational excellence.
                   </p>
                 </div>
@@ -111,47 +114,31 @@ const [contactRef, contactInView] = useInView();
         </div>
       </section>
 
-       {/* Solutions Section */}
-     <section
-  id="solutions"
-  ref={projectsRef}
-  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
-    prefersReducedMotion ? "" : "transition-all duration-1000"
-  } ${projectsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      {/* Methodology Section */}
+      <MethodologySection />
+
+      {/* Solutions Section */}
+      <section
+        id="solutions"
+        ref={projectsRef}
+        className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+          prefersReducedMotion ? "" : "transition-all duration-1000"
+        } ${projectsInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Enterprise Solutions</h2>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-24">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Enterprise Solutions</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Strategic AI consulting and implementation services designed to transform industry operations and create sustainable competitive advantage.
             </p>
           </div>
-          <div className="flex flex-col gap-12 max-w-6xl mx-auto px-6">
-            {/* Flagship Solution */}
-            <div className="w-full">
-              {projectsData[0] && (
-                <div className="transform hover:scale-[1.02] transition-transform duration-300">
-                  <ProjectCard
-                    key={projectsData[0].slug}
-                    {...projectsData[0]}
-                    onEmbedToggle={() => handleEmbedToggle(projectsData[0]?.slug || '')}
-                    embedVisible={embedVisible[projectsData[0]?.slug || ''] || false}
-                  />
-                </div>
-              )}
-            </div>
-            
-            {/* Secondary Solutions Row */}
-            <div className="grid md:grid-cols-2 gap-12">
-              {projectsData.slice(1).map((project: Project) => (
-                <ProjectCard
-                  key={project.slug}
-                  {...project}
-                  onEmbedToggle={() => handleEmbedToggle(project.slug)}
-                  embedVisible={embedVisible[project.slug] || false}
-                />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            {projectsData.map((project: Project) => (
+              <ProjectCard
+                key={project.slug}
+                {...project}
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -159,20 +146,28 @@ const [contactRef, contactInView] = useInView();
           
       {/* Contact Section */}
       <section
-  id="contact"
-  ref={contactRef}
-  className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
-    prefersReducedMotion ? "" : "transition-all duration-1000"
-  } ${contactInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
->
-        <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Get in Touch</h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12">
-            Ready to transform your operations and drive measurable growth? Let's discuss your strategic objectives and operational challenges.
-          </p>
-          <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0">
-            <a href="mailto:contact@sidiqi.ai">Schedule Strategic Consultation</a>
-          </Button>
+        id="contact"
+        ref={contactRef}
+        className={`relative min-h-[100vh] py-32 scroll-mt-24 flex items-center justify-center overflow-hidden ${
+          prefersReducedMotion ? "" : "transition-all duration-1000"
+        } ${contactInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+      >
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Schedule Strategic Consultation</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Ready to transform your operations and drive measurable growth? Let's discuss your strategic objectives and operational challenges.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <Button 
+              size="lg" 
+              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 px-12 py-6 text-lg rounded-2xl shadow-lg shadow-blue-500/25 border-0 transform hover:scale-105 transition-all duration-300"
+              asChild
+            >
+              <a href="mailto:contact@sidiqi.ai">Schedule Consultation</a>
+            </Button>
+          </div>
         </div>
       </section>
     </>

@@ -9,6 +9,7 @@ const Footer: React.FC = () => {
           <a href="/insights" className="text-white hover:text-blue-400 transition-all duration-300">Insights</a>
           <a href="/labs" className="text-white hover:text-blue-400 transition-all duration-300">Labs</a>
           <a href="/about" className="text-white hover:text-blue-400 transition-all duration-300">About</a>
+          <a href="#methodology" className="text-white hover:text-blue-400 transition-all duration-300">Strategic Approach</a>
           <a href="/contact" className="text-white hover:text-blue-400 transition-all duration-300">Schedule Strategic Consultation</a>
           <span className="ml-auto flex items-center gap-2">
             <a href="https://sg2tech.com" target="_blank" rel="noopener" className="text-white hover:text-blue-400 transition-all duration-300">SG2 Tech</a>

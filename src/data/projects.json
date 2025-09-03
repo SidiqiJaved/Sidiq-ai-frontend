@@ -2,12 +2,12 @@
   {
     "slug": "restaurant-operations",
     "title": "Restaurant Operations Intelligence",
-    "summary": "An integrated AI platform designed specifically for restaurant chains with 5+ locations — featuring automated inspections, staff training systems, and intelligent inventory management.",
+    "summary": "AI-powered platform for restaurant chains that automates inspections, staff training, and inventory management. Streamline operations and boost efficiency across all locations.",
     "tags": ["Staff Training", "Smart Inventory", "AI Analytics"],
     "demoUrl": "https://demo.sidiqi.ai/restaurant-ops",
     "embedUrl": "https://demo.sidiqi.ai/restaurant-ops/embed",
     "repoUrl": "https://github.com/sidiqi/restaurant-operations",
-    "usageDetail": "Used by restaurant chains with 5-500 locations",
+    "usageDetail": "**Used by restaurant chains** with 5-500 locations",
     "pricingDetail": "Custom solution designed for your operation size",
     "ctaText": "Request Custom Demo",
     "ctaUrl": "mailto:sales@sidiqi.ai?subject=Restaurant Operations Custom Demo Request"
@@ -15,12 +15,12 @@
   {
     "slug": "professional-development",
     "title": "Professional Development Suite",
-    "summary": "An intelligent career development platform that guides professionals through resume optimization, skill assessment, and career pathway planning using AI-driven insights.",
+    "summary": "AI-driven career development platform that optimizes resumes, assesses skills, and plans career pathways. Transform your organization's talent development.",
     "tags": ["Career Intelligence", "Optimization", "Professional Growth"],
     "demoUrl": "https://demo.sidiqi.ai/professional-dev",
     "embedUrl": "https://demo.sidiqi.ai/professional-dev/embed",
     "repoUrl": "https://github.com/sidiqi/professional-development",
-    "usageDetail": "Enterprise HR solution for growing companies",
+    "usageDetail": "**Enterprise HR solution** for growing companies",
     "pricingDetail": "Volume pricing available",
     "ctaText": "Get Enterprise Access",
     "ctaUrl": "mailto:enterprise@sidiqi.ai?subject=Professional Development Enterprise Access"
@@ -28,12 +28,12 @@
   {
     "slug": "healthcare-modernization",
     "title": "Healthcare Modernization Platform",
-    "summary": "A streamlined platform for healthcare practices and medical offices that streamlines patient intake, optimizes scheduling, and automates follow-ups — improving care without disrupting existing systems.",
+    "summary": "Modern healthcare platform that streamlines patient intake, optimizes scheduling, and automates follow-ups. Enhance patient care while maintaining workflow efficiency.",
     "tags": ["Patient Intake", "Scheduling", "Follow-Ups"],
     "conceptUrl": "https://demo.sidiqi.ai/healthcare/concept",
     "embedUrl": "https://demo.sidiqi.ai/healthcare/embed",
     "repoUrl": "https://github.com/sidiqi/healthcare-platform",
-    "usageDetail": "HIPAA-compliant, enterprise-ready",
+    "usageDetail": "**HIPAA-compliant**, enterprise-ready",
     "pricingDetail": "Seamless integration with existing systems",
     "ctaText": "Schedule Consultation",
     "ctaUrl": "mailto:healthcare@sidiqi.ai?subject=Healthcare Platform Consultation Request"
