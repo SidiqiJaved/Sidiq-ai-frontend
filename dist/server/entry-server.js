@@ -3,8 +3,7 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom/server.mjs";
 import * as React from "react";
 import React__default, { useState, useEffect } from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { X, Menu, ExternalLink, Target, Eye } from "lucide-react";
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -722,37 +721,23 @@ const initializeTheme = () => {
   }
 };
 const App = () => {
-  React__default.useEffect(() => {
+  useEffect(() => {
     initializeTheme();
   }, []);
-  return /* @__PURE__ */ jsx(React__default.StrictMode, { children: /* @__PURE__ */ jsx(BrowserRouter, { children: /* @__PURE__ */ jsx(Layout, { children: /* @__PURE__ */ jsxs(Routes, { children: [
+  return /* @__PURE__ */ jsx(React__default.StrictMode, { children: /* @__PURE__ */ jsx(Layout, { children: /* @__PURE__ */ jsxs(Routes, { children: [
     /* @__PURE__ */ jsx(Route, { path: "/", element: /* @__PURE__ */ jsx(Home, {}) }),
     /* @__PURE__ */ jsx(Route, { path: "/solutions", element: /* @__PURE__ */ jsx(Solutions, {}) }),
     /* @__PURE__ */ jsx(Route, { path: "/contact", element: /* @__PURE__ */ jsx(Contact, {}) }),
     /* @__PURE__ */ jsx(Route, { path: "/figma-dev", element: /* @__PURE__ */ jsx(FigmaDev, {}) })
-  ] }) }) }) });
+  ] }) }) });
 };
-if (typeof window !== "undefined") {
-  const rootElement = document.getElementById("root");
-  if (rootElement) {
-    if (rootElement.hasChildNodes()) {
-      ReactDOM.hydrateRoot(rootElement, /* @__PURE__ */ jsx(App, {}));
-    } else {
-      ReactDOM.createRoot(rootElement).render(/* @__PURE__ */ jsx(App, {}));
-    }
-  }
-}
 function render(url) {
   const html = renderToString(
     /* @__PURE__ */ jsx(StaticRouter, { location: url, children: /* @__PURE__ */ jsx(App, {}) })
   );
   return { html };
 }
-async function renderPage(url) {
-  return render(url);
-}
 export {
-  render,
-  renderPage
+  render
 };
 //# sourceMappingURL=entry-server.js.map

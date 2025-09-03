@@ -16,22 +16,54 @@ async function generate() {
     'utf-8'
   );
 
-  // Create output directory
-  const outDir = path.resolve(__dirname, '../dist/static');
+  // Create output directory and clean it
+  const outDir = path.resolve(__dirname, '../dist');
   fs.mkdirSync(outDir, { recursive: true });
+
+  // Copy client assets
+  const clientDir = path.resolve(__dirname, '../dist/client');
+  if (fs.existsSync(clientDir)) {
+    const files = fs.readdirSync(clientDir);
+    for (const file of files) {
+      const srcPath = path.join(clientDir, file);
+      const destPath = path.join(outDir, file);
+      if (file !== 'index.html') {
+        fs.cpSync(srcPath, destPath, { recursive: true });
+      }
+    }
+  }
 
   // Generate static pages for each route
   for (const url of routes) {
     const { html } = await render(url);
-    const targetFile = path.join(outDir, url === '/' ? 'index.html' : `${url.slice(1)}.html`);
+    const segments = url.split('/').filter(Boolean);
     
-    const fullHtml = template.replace('<div id="root"></div>', `<div id="root">${html}</div>`);
-    
-    // Ensure directory exists
-    const targetDir = path.dirname(targetFile);
-    fs.mkdirSync(targetDir, { recursive: true });
-    
+    // Determine target file path
+    let targetFile;
+    if (url === '/') {
+      targetFile = path.join(outDir, 'index.html');
+    } else {
+      const dirPath = path.join(outDir, ...segments.slice(0, -1));
+      fs.mkdirSync(dirPath, { recursive: true });
+      targetFile = path.join(dirPath, 'index.html');
+    }
+
+    const fullHtml = template.replace(
+      '<div id="root"></div>',
+      `<div id="root">${html}</div>`
+    );
+
     fs.writeFileSync(targetFile, fullHtml);
     console.log(`Generated ${targetFile}`);
   }
+
+  // Create 404 page
+  const notFoundHtml = template.replace(
+    '<div id="root"></div>',
+    '<div id="root"><h1>404 - Page Not Found</h1><p>The page you\'re looking for doesn\'t exist.</p></div>'
+  );
+  fs.writeFileSync(path.join(outDir, '404.html'), notFoundHtml);
+  console.log('Generated 404.html');
 }
+
+generate().catch(console.error);
