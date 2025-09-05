@@ -11,15 +11,19 @@ if (typeof window !== 'undefined') {
     if (rootElement.hasChildNodes()) {
       ReactDOM.hydrateRoot(
         rootElement,
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <React.StrictMode>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </React.StrictMode>
       );
     } else {
       ReactDOM.createRoot(rootElement).render(
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
+        <React.StrictMode>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </React.StrictMode>
       );
     }
   }

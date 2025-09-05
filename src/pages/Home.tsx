@@ -107,10 +107,10 @@ const [contactRef, contactInView] = useInView();
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              About Us
+              About Sidiqi.ai
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Where Technology Meets Business Innovation
+              Fortune 500 Operations Expertise for Growing Restaurant Chains
             </p>
           </div>
           
@@ -118,52 +118,38 @@ const [contactRef, contactInView] = useInView();
             {/* Opening Section */}
             <div className="text-lg text-gray-300 leading-relaxed">
               <p>
-                Sidiqi.ai is the strategic consulting division of Sidiqi Global Group. We transform technology experiments into competitive advantages that drive real business results.
+                Sidiqi.ai brings Fortune 500 restaurant operations expertise to growing chains that can't afford enterprise consulting but need enterprise-level results.
+              </p>
+              <p className="mt-4">
+                Founded by consultants who implemented operations technology for McDonald's, UnitedHealth Group, and other major brands, we bridge the gap between expensive enterprise consulting and inadequate small business solutions.
               </p>
             </div>
 
-            {/* Our Foundation */}
+            {/* Our Background */}
             <div className="space-y-3">
-              <h3 className="text-2xl font-bold text-white">Our Foundation</h3>
+              <h3 className="text-2xl font-bold text-white">Our Background</h3>
               <div className="text-lg text-gray-300 leading-relaxed">
                 <p>
-                  Built from years of deploying enterprise solutions through SG2 Technologies, we specialize in restaurant chain operations with proven expertise across healthcare practices and professional service organizations. Our deep domain knowledge in multi-location operations gives us the expertise to deliver what actually works at scale.
+                  Our team has spent years implementing the systems that power billion-dollar restaurant brands. We've seen what works at Fortune 500 scale—and what doesn't. Now we adapt those proven systems for 10-50 location restaurant chains.
                 </p>
               </div>
             </div>
 
-            {/* Our Approach */}
+            {/* Why Growing Chains Choose Us */}
             <div className="space-y-3">
-              <h3 className="text-2xl font-bold text-white">Our Approach</h3>
-              <div className="text-lg text-gray-300 leading-relaxed">
-                <p>
-                  We start with your business objectives, not the technology. Every engagement begins with understanding your operational challenges and growth goals. Then we architect solutions that integrate seamlessly with your existing systems while positioning you for scalable growth.
-                </p>
-              </div>
-            </div>
-
-            {/* Why We're Different */}
-            <div className="space-y-3">
-              <h3 className="text-2xl font-bold text-white">Why We're Different</h3>
+              <h3 className="text-2xl font-bold text-white">Why Growing Chains Choose Us</h3>
               <div className="text-lg text-gray-300 leading-relaxed space-y-3">
                 <p>
-                  <strong className="text-blue-400">Strategic First:</strong> We're business strategists who happen to be technology experts.
+                  <strong className="text-blue-400">Enterprise expertise without enterprise minimums:</strong> Access to Fortune 500-level consulting without the typical million-dollar engagements.
                 </p>
                 <p>
-                  <strong className="text-blue-400">Proven Results:</strong> Our solutions power real businesses, from optimizing restaurant operations across hundreds of locations to streamlining healthcare workflows.
+                  <strong className="text-blue-400">McDonald's-level systems sized for your business:</strong> The same operational excellence that powers global brands, tailored for growing chains.
                 </p>
                 <p>
-                  <strong className="text-blue-400">Enterprise Thinking:</strong> Whether you're a 50-location chain or growing practice, you get enterprise-level strategy scaled to your needs.
+                  <strong className="text-blue-400">Implementation in weeks, not years:</strong> Fast deployment of proven systems that start delivering results immediately.
                 </p>
-              </div>
-            </div>
-
-            {/* Our Commitment */}
-            <div className="space-y-3">
-              <h3 className="text-2xl font-bold text-white">Our Commitment</h3>
-              <div className="text-lg text-gray-300 leading-relaxed">
                 <p>
-                  We measure success by your competitive advantage. Every solution we develop is designed to create measurable impact on your operations and sustainable value for your business.
+                  <strong className="text-blue-400">Founder-level attention on every project:</strong> Direct access to senior consultants, not junior analysts.
                 </p>
               </div>
             </div>
@@ -181,7 +167,7 @@ const [contactRef, contactInView] = useInView();
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-24">
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Proven Solutions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">Enterprise Solutions</h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               <strong className="text-blue-400">Specializing in Restaurant Operations</strong> with proven expertise across healthcare practices and growing enterprises.
             </p>

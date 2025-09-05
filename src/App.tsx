@@ -24,16 +24,14 @@ const App = () => {
   }, []);
 
   return (
-    <React.StrictMode>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/solutions" element={<Solutions />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/figma-dev" element={<FigmaDev />} />
-        </Routes>
-      </Layout>
-    </React.StrictMode>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/solutions" element={<Solutions />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/figma-dev" element={<FigmaDev />} />
+      </Routes>
+    </Layout>
   );
 };
 
