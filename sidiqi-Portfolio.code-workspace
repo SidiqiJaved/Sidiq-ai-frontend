@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../sidiqi group"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "sidiqi-Portfolio",
+		"git.ignoreLimitWarning": true
+	}
+}

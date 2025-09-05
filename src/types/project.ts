@@ -3,9 +3,6 @@ export type Project = {
   title: string;
   summary: string;
   tags: string[];
-  repoUrl?: string;
   usageDetail?: string;
   pricingDetail?: string;
-  ctaText?: string;
-  ctaUrl?: string;
 };

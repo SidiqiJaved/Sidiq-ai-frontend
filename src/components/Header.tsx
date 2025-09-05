@@ -1,4 +1,5 @@
 import React from 'react';
+import { track } from "@/lib/analytics";
 
 const Header: React.FC = () => {
   return (
@@ -10,8 +11,32 @@ const Header: React.FC = () => {
         <a href="/about">About</a>
         <a href="/contact">Schedule Strategic Consultation</a>
         <div className="spacer" />
-        <a href="https://sg2tech.com" target="_blank" rel="noopener">SG2 Tech</a>
-        <a href="https://sidiqigroup.com" target="_blank" rel="noopener">Sidiqi Group</a>
+        <a
+          href="https://sg2tech.com"
+          target="_blank"
+          rel="noopener"
+          onClick={() => {
+            if (typeof track === 'function') track('sg2_link_click');
+            if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+              (window as any).gtag('event', 'sg2_link_click');
+            }
+          }}
+        >
+          SG2 Tech
+        </a>
+        <a
+          href="https://sidiqigroup.com"
+          target="_blank"
+          rel="noopener"
+          onClick={() => {
+            if (typeof track === 'function') track('sidiqigroup_link_click');
+            if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
+              (window as any).gtag('event', 'sidiqigroup_link_click');
+            }
+          }}
+        >
+          Sidiqi Group
+        </a>
         <button
           aria-label="Toggle theme"
           className="btn ghost"

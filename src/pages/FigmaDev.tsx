@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 
 export const FigmaDev: React.FC = () => {
+  if (process.env.NODE_ENV === "production") {
+    // Hide all dev UI in production
+    return null;
+  }
+
   const [url, setUrl] = useState("");
   const [embedVisible, setEmbedVisible] = useState(false);
 

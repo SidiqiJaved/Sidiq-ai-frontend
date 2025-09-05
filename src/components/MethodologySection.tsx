@@ -5,6 +5,53 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 export const MethodologySection: React.FC = () => {
   const [methodologyRef, methodologyInView] = useInView();
 
+  const phases = [
+    {
+      title: "Discovery & Assessment",
+      description: "Operations audit using Fortune 500 diagnostic frameworks to identify your biggest growth opportunities",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+      )
+    },
+    {
+      title: "Enterprise Solution Design",
+      description: "Proven big-chain systems and processes sized for your business scale and budget",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+          <polyline points="2 17 12 22 22 17"/>
+          <polyline points="2 12 12 17 22 12"/>
+        </svg>
+      )
+    },
+    {
+      title: "Implementation",
+      description: "Deploy enterprise-grade systems without disrupting daily operations—just like the big brands do",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+          <line x1="12" y1="22.08" x2="12" y2="12"/>
+        </svg>
+      )
+    },
+    {
+      title: "Optimization",
+      description: "Continuous improvement with enterprise-level analytics and performance monitoring",
+      icon: (
+        <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="12" y1="20" x2="12" y2="10"/>
+          <line x1="18" y1="20" x2="18" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="16"/>
+        </svg>
+      )
+    }
+  ];
+
   return (
     <section 
       id="methodology"
@@ -16,63 +63,18 @@ export const MethodologySection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            Our Strategic Approach
+            How We Bring Fortune 500 Operations to Growing Chains
           </h2>
-          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-            We deliver transformation through our proven four-phase methodology
+          <p className="text-xl text-gray-400 max-w-4xl mx-auto">
+            The same proven process we used at McDonald's and Fortune 500 brands—adapted for 10-50 location restaurants.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              title: "Discovery & Assessment",
-              description: "Deep analysis of current operations and strategic objectives",
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/>
-                  <line x1="12" y1="8" x2="12" y2="12"/>
-                  <line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-              )
-            },
-            {
-              title: "Solution Architecture",
-              description: "Custom AI strategy design aligned with business goals",
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-                  <polyline points="2 17 12 22 22 17"/>
-                  <polyline points="2 12 12 17 22 12"/>
-                </svg>
-              )
-            },
-            {
-              title: "Implementation",
-              description: "Seamless deployment with minimal operational disruption",
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
-                  <line x1="12" y1="22.08" x2="12" y2="12"/>
-                </svg>
-              )
-            },
-            {
-              title: "Optimization",
-              description: "Continuous improvement and measurable ROI delivery",
-              icon: (
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="12" y1="20" x2="12" y2="10"/>
-                  <line x1="18" y1="20" x2="18" y2="4"/>
-                  <line x1="6" y1="20" x2="6" y2="16"/>
-                </svg>
-              )
-            }
-          ].map((phase, index) => (
-            <Card 
+          {phases.map((phase, index) => (
+            <Card
               key={phase.title}
-              className="group hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 bg-gray-900/50 backdrop-blur-sm transform hover:scale-105 hover:-translate-y-4"
+              className="group hover:border-blue-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-blue-500/20 bg-gray-900/50 backdrop-blur-sm transform hover:scale-105 hover:-translate-y-4 hover:bg-gray-800/50 p-8 rounded-3xl flex flex-col h-full"
               style={{
                 animation: `fadeIn 0.5s ease-out ${index * 0.2}s forwards`,
                 opacity: 0
@@ -84,7 +86,7 @@ export const MethodologySection: React.FC = () => {
                     {phase.icon}
                   </div>
                 </div>
-                <CardTitle className="text-2xl text-white group-hover:text-blue-400 transition-colors">
+                <CardTitle className="text-2xl font-bold text-white group-hover:text-blue-400 transition-colors mb-4">
                   {phase.title}
                 </CardTitle>
                 <CardDescription className="text-lg text-gray-400 leading-relaxed mt-3">
@@ -98,5 +100,3 @@ export const MethodologySection: React.FC = () => {
     </section>
   );
 };
-
-export default MethodologySection;

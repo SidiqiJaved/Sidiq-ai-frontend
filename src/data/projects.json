@@ -2,40 +2,25 @@
   {
     "slug": "restaurant-operations",
     "title": "Restaurant Operations Intelligence",
-    "summary": "AI-powered platform for restaurant chains that automates inspections, staff training, and inventory management. Streamline operations and boost efficiency across all locations.",
-    "tags": ["Staff Training", "Smart Inventory", "AI Analytics"],
-    "demoUrl": "https://demo.sidiqi.ai/restaurant-ops",
-    "embedUrl": "https://demo.sidiqi.ai/restaurant-ops/embed",
-    "repoUrl": "https://github.com/sidiqi/restaurant-operations",
-    "usageDetail": "**Used by restaurant chains** with 5-500 locations",
-    "pricingDetail": "Custom solution designed for your operation size",
-    "ctaText": "Request Custom Demo",
-    "ctaUrl": "mailto:sales@sidiqi.ai?subject=Restaurant Operations Custom Demo Request"
-  },
-  {
-    "slug": "professional-development",
-    "title": "Professional Development Suite",
-    "summary": "AI-driven career development platform that optimizes resumes, assesses skills, and plans career pathways. Transform your organization's talent development.",
-    "tags": ["Career Intelligence", "Optimization", "Professional Growth"],
-    "demoUrl": "https://demo.sidiqi.ai/professional-dev",
-    "embedUrl": "https://demo.sidiqi.ai/professional-dev/embed",
-    "repoUrl": "https://github.com/sidiqi/professional-development",
-    "usageDetail": "**Enterprise HR solution** for growing companies",
-    "pricingDetail": "Volume pricing available",
-    "ctaText": "Get Enterprise Access",
-    "ctaUrl": "mailto:enterprise@sidiqi.ai?subject=Professional Development Enterprise Access"
+    "summary": "Our flagship solution for restaurant chains. AI-powered platform that automates inspections, staff training, and inventory management. Proven results across 5-500+ location operations.",
+    "tags": ["Staff Training", "Smart Inventory", "Operations Analytics", "Multi-Location"],
+    "usageDetail": "**Our specialty**: Restaurant chains with 5-500+ locations",
+    "pricingDetail": "ROI typically seen within 90 days"
   },
   {
     "slug": "healthcare-modernization",
-    "title": "Healthcare Modernization Platform",
-    "summary": "Modern healthcare platform that streamlines patient intake, optimizes scheduling, and automates follow-ups. Enhance patient care while maintaining workflow efficiency.",
-    "tags": ["Patient Intake", "Scheduling", "Follow-Ups"],
-    "conceptUrl": "https://demo.sidiqi.ai/healthcare/concept",
-    "embedUrl": "https://demo.sidiqi.ai/healthcare/embed",
-    "repoUrl": "https://github.com/sidiqi/healthcare-platform",
-    "usageDetail": "**HIPAA-compliant**, enterprise-ready",
-    "pricingDetail": "Seamless integration with existing systems",
-    "ctaText": "Schedule Consultation",
-    "ctaUrl": "mailto:healthcare@sidiqi.ai?subject=Healthcare Platform Consultation Request"
+    "title": "Healthcare Practice Optimization",
+    "summary": "Streamline healthcare operations with smart patient intake, optimized scheduling, and automated follow-ups. HIPAA-compliant solutions that enhance patient care while improving efficiency.",
+    "tags": ["Patient Intake", "Smart Scheduling", "Follow-Up Automation"],
+    "usageDetail": "**HIPAA-compliant** for healthcare practices",
+    "pricingDetail": "Seamless integration with existing systems"
+  },
+  {
+    "slug": "professional-development",
+    "title": "Enterprise Growth Solutions",
+    "summary": "AI-driven talent development platform for growing companies. Optimize hiring processes, assess skills, and plan career pathways to scale your team efficiently.",
+    "tags": ["Talent Development", "HR Optimization", "Skills Assessment"],
+    "usageDetail": "**HR solution** for growing companies",
+    "pricingDetail": "Volume pricing available"
   }
 ]

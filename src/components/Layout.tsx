@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import { SidiqiLogo } from "@/components/SidiqiLogo";
 import React, { useEffect, useState } from "react";
+import { track } from "@/lib/analytics";
 import { Menu, X } from "lucide-react"; // Optional: for icons
 import Footer from "./Footer";
 
@@ -9,7 +10,7 @@ const navItems = [
   { to: "about", label: "About" },
   { to: "solutions", label: "Solutions" },
   { to: "methodology", label: "Strategic Approach" },
-  { to: "contact", label: "Schedule Strategic Consultation" },
+  { to: "contact", label: "Book Strategy Call" },
 ];
 
 export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -42,7 +43,10 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <SidiqiLogo size="sm" />
-              <span className="text-xl font-bold text-white">Sidiqi.ai</span>
+              <div>
+                <div className="text-xl font-bold text-white">Sidiqi.ai</div>
+                <div className="text-xs text-gray-400 hidden sm:block">Enterprise Solutions for Restaurant Chains</div>
+              </div>
             </div>
 
             {/* ✅ Mobile Menu Toggle */}
@@ -96,6 +100,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
       </nav>
 
       <main className="pt-24">{children}</main>
+  {/* Removed sticky Schedule CTA */}
       <Footer />
     </div>
   );
